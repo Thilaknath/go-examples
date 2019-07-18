@@ -23,6 +23,12 @@ func newDeck() deck {
 	return cards
 }
 
+// The function accepts parameters of type deck and int and returns two values of type
+// deck
+func deal(d deck, handSize int) (deck, deck){
+	fmt.
+}
+
 func (d deck) print() {
 	for i, card := range d {
 		fmt.Println(i, card)
