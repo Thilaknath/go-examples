@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strings"
+	"io/ioutil"
 )
 
 // Create a new type of Deck, which is a slice of Strings
@@ -42,6 +43,7 @@ func (d deck) toString() string {
 	return strings.Join([]string(d), ",")	
 }
 
-func (d deck) saveToFile() {
-
+// The WriteFile method is accepting parameters based on go Documentation
+func (d deck) saveToFile(filename string) error{
+	return ioutil.WriteFile(filename, []byte(d.toString()), 0666)
 }
