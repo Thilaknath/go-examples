@@ -11,8 +11,8 @@ type deck []string
 func newDeck() deck {
 	cards := deck{}
 
-	cardSuits := []string {"Spades" , "Diamonds", "Hearts", "Clubs"}
-	cardValues := []string {"Ace", "Two", "Three", "Four"}
+	cardSuits := []string{"Spades", "Diamonds", "Hearts", "Clubs"}
+	cardValues := []string{"Ace", "Two", "Three", "Four"}
 
 	for _, suit := range cardSuits {
 		for _, value := range cardValues {
@@ -25,8 +25,10 @@ func newDeck() deck {
 
 // The function accepts parameters of type deck and int and returns two values of type
 // deck
-func deal(d deck, handSize int) (deck, deck){
-	fmt.
+func deal(d deck, handSize int) (deck, deck) {
+
+	// Example [:handSize] if handsize 2 returns 0,1 [handSize:] returns 2
+	return d[:handSize], d[handSize:]
 }
 
 func (d deck) print() {
